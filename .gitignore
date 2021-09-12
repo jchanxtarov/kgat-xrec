@@ -1,0 +1,19 @@
+Memo.md
+__pycache__/
+.mypy_cache
+.ipynb_checkpoints/
+
+# datasets
+*/datasets/zr-sample/*
+
+# log
+*.log
+*/outputs/zr-sample/pretrain/*
+*/outputs/zr-sample/result/*
+test.txt
+
+# Environment
+.env
+.venv
+.vscode
+test.ipynb
