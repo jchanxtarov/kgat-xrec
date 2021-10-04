@@ -139,8 +139,7 @@ class KGAT(nn.Module):
         wr_t = th.matmul(self.entity_embed(edges.dst['id']), self.trans_w_r)
 
         # Eq.(5)
-        att = th.mul(epsilons.reshape(-1, 1), th.bmm(wr_t.unsqueeze(1),
-                                                     th.tanh(wr_h + r_embedd).unsqueeze(2)).squeeze(-1))  # (n_edge, 1)
+        att = epsilons.reshape(-1, 1) * th.bmm(wr_t.unsqueeze(1), th.tanh(wr_h + r_embedd).unsqueeze(2)).squeeze(-1)  # (n_edge, 1)
         return {'attention': att}
 
     def _normalize_attention(self, graph: DGLHeteroGraph) -> th.Tensor:
