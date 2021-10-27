@@ -98,7 +98,7 @@ class KGAT(nn.Module):
         # Eq.(12)
         # see also: https://github.com/xiangwang1223/knowledge_graph_attention_network/blob/master/Model/KGAT.py#L220
         base_loss = F.softplus(-1.0 * (scores_pos - scores_neg))
-        base_loss = th.sum(base_loss)  # consider: test
+        base_loss = th.mean(base_loss)  # consider: test
         reg_loss = self._l2_loss(
             user_embed) + self._l2_loss(item_embed_pos) + self._l2_loss(item_embed_neg)
         reg_loss = self.list_reg_learning_rates[0] * reg_loss
@@ -180,7 +180,7 @@ class KGAT(nn.Module):
         # Eq.(2)
         # see also: https://github.com/xiangwang1223/knowledge_graph_attention_network/blob/master/Model/KGAT.py#L241
         base_loss = eps * F.softplus(-1.0 * (scores_neg - scores_pos))
-        base_loss = th.sum(base_loss)
+        base_loss = th.mean(base_loss)
         reg_loss = self._l2_loss(wr_h) + self._l2_loss(r_embed) + \
             self._l2_loss(wr_pos_t) + self._l2_loss(wr_neg_t)
         reg_loss = self.list_reg_learning_rates[1] * reg_loss
