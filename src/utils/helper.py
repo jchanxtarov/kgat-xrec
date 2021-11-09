@@ -52,15 +52,15 @@ def set_logging(path: str, save_log: bool) -> None:
         "Success to set logging & generate logfile where {}.".format(path_log))
 
 
-def is_best_epoch(list_recall, current_epoch, interval_evaluate, stopping_steps) -> Tuple[bool, bool]:
-    best_idx = list_recall.index(max(list_recall))
+def is_best_epoch(list_acc, current_epoch, interval_evaluate, stopping_steps) -> Tuple[bool, bool]:
+    best_idx = list_acc.index(max(list_acc))
     best_epoch = (best_idx + 1) * interval_evaluate
 
     is_best = False
     should_stop = False
-    if current_epoch >= best_epoch:
+    if current_epoch == best_epoch:
         is_best = True
-    if best_epoch >= stopping_steps:
+    if best_epoch >= stopping_steps and current_epoch > best_epoch:
         should_stop = True
     return is_best, should_stop
 

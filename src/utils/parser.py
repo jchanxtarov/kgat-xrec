@@ -103,7 +103,7 @@ def parse_args():
     parser.add_argument(
         '--interval_evaluate',
         type=int,
-        default=50,
+        default=1,
         help='Set interval_evaluate.'
     )
     parser.add_argument(
