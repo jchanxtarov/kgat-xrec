@@ -1,10 +1,10 @@
-# Knowledge Graph Attention Network for Explainable Recommendation
+# Knowledge Graph Attention Network
 
 This repository contains the implementation for the paper:
 
-> Ryotaro Shimizu, Megumi Matsutani, Masayuki Goto ({Year}). {Title}.
-> Paper in {Journal}.
-> {Link}
+> Ryotaro Shimizu, Megumi Matsutani, Masayuki Goto (2021). An explainable recommendation framework based on an improved knowledge graph attention network with massive volumes of side information.
+> Paper in Knowledge-Based Systems.
+> https://www.sciencedirect.com/science/article/pii/S0950705121010959
 
 ## Citation
 ---
@@ -12,11 +12,6 @@ If you want to use our codes and datasets in your research, please cite:
 ```
 WIP
 ```
-
-## Dataset
----
-
-WIP
 
 ## How to run the code
 ---
