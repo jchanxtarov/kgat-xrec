@@ -10,7 +10,16 @@ This repository contains the implementation for the paper:
 ---
 If you want to use our codes and datasets in your research, please cite:
 ```
-WIP
+@article{SHIMIZU2021107970,
+  title = {An explainable recommendation framework based on an improved knowledge graph attention network with massive volumes of side information},
+  journal = {Knowledge-Based Systems},
+  pages = {107970},
+  year = {2021},
+  issn = {0950-7051},
+  doi = {https://doi.org/10.1016/j.knosys.2021.107970},
+  url = {https://www.sciencedirect.com/science/article/pii/S0950705121010959},
+  author = {Ryotaro Shimizu and Megumi Matsutani and Masayuki Goto},
+}
 ```
 
 ## How to run the code
